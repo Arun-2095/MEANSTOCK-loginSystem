@@ -1,0 +1,15 @@
+<div class="body"> 
+  <form [formGroup]='login' class="login-box" (submit)='getUser()' >
+      <ng-flash-message></ng-flash-message>
+    <h1>Login  </h1>
+    <div class="textbox">
+      <i class="fas fa-user"></i>
+      <input type="email" placeholder="Username" formControlName="email"  name="admin" required>
+    </div>
+  <div class="textbox">
+      <i class="fas fa-lock"></i>
+      <input type="password" placeholder="Password"   formControlName="password"  name="password" required>
+    </div>
+  <input type="submit" class="btn"  [disabled]="!login.valid" value="Sign in">
+  </form>
+  </div>

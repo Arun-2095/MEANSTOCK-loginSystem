@@ -1,0 +1,59 @@
+
+  
+  <!-- formulário de contacto utilizando html e css -->  
+<div class="contain"> 
+	<div class="contact_form">
+
+		<div class="form">			
+      <h1>Registration</h1>
+				
+
+
+					<form [formGroup]='user' action="" (submit)="getUserData()">				
+
+						
+								<p>
+									<label for="name">Name
+										<span >*</span>
+									</label>
+										<input type="text" formControlName="username" id="name" required  placeholder="User Name">
+								</p>
+							
+								<p>
+									<label for="email">Email
+										<span>*</span>
+									</label>
+										<input type="email" formControlName="email" id="email" required placeholder="Email">
+								</p>
+						
+								<p>
+									<label for="phone" >Phone
+									</label>
+										<input type="tel" formControlName="phone" id="telefone" placeholder="Phone">
+								</p>		
+							
+								<p>
+									<label for="password" > Password
+									</label>
+										<input type="password" formControlName="password" id="website" placeholder="Password">
+								</p>		
+							
+								<p>
+									<label for="confirm Password" >Confirm Password
+										<span>*</span>
+									</label>
+										<input type="password" formControlName="confirmPassword" id="Confirm Password" required placeholder="Confirm Password">
+								</p>		
+							
+							
+								<button type="submit"  name="sumbit" id="sumbit" [disabled]=!user.valid><p>sumbit</p></button>
+
+											
+						
+					</form>
+		</div>	
+	</div>
+
+</div>
+
+

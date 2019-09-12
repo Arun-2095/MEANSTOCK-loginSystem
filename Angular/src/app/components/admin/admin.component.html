@@ -1,0 +1,15 @@
+<div class="body"> 
+    <form  class="login-box" (submit)='getData()' >
+        <ng-flash-message></ng-flash-message>
+      <h1>Welcome Admin</h1>
+      <div class="textbox">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" [(ngModel)]="admin"  name="admin">
+      </div>
+    <div class="textbox">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password"   [(ngModel)]="password"  name="password" >
+      </div>
+    <input type="submit" class="btn" value="Sign in">
+    </form>
+    </div>
