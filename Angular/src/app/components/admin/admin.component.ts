@@ -39,8 +39,6 @@ export class AdminComponent implements OnInit {
 
   // authenticate admin
 
-  this.auth.authenticateAdmin(detail).subscribe((data) =>  console.log(data));
-
 }
 
 

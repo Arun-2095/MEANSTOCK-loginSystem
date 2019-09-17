@@ -28,30 +28,39 @@ mongoose.connection.on('connected',()=>{
 // Registrating the user to DataBase
 
 routers.post('/registration', (req, res)=>{
+  
+    if(req.body.confirmPassword === req.body.password ){
+        const user = new User({
+            username:req.body.username,
+            email:req.body.email,
+            phone:req.body.phone,
+            password:req.body.password,
+            
+        });
     
-    const user = new User({
-        username:req.body.username,
-        email:req.body.email,
-        phone:req.body.phone,
-        password:req.body.password
-    });
-
-    Password.generatePassword(user.password , function (err, hash){
-        if(err){
-            throw err;
-        }
-        user.password = hash;
-
-        user.save(function(err,user){
+    
+        Password.generatePassword(user.password , function (err, hash){
             if(err){
-                
-                res.json({success:false , mgs:"user not Registered" , err : err.message });
+                throw err;
             }
-            if(user){
-              res.json({success:true , mgs:"user Registered successfuly" });
-            }
-        })
-    });
+            user.password = hash;
+    
+            user.save(function(err,user){
+                if(err){
+                    
+                    res.json({success:false , mgs:"user not Registered" , err : err.message });
+                }
+                if(user){
+                  res.json({success:true , mgs:"user Registered successfuly" });
+                }
+            })
+        });
+
+    } else {
+
+        res.json({success:false , mgs:"Password Donot Match" });
+    }
+   
    
 
   

@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import {  HttpClient , HttpHeaders } from '@angular/common/http';
-
+import { Observable } from 'rxjs';
+import { Dataformat } from '../interface/dataformat';
+import { RegistrationData } from '../interface/dataformat';
+import { RegistrationResponse } from '../interface/dataformat';
 
 @Injectable({
   providedIn: 'root'
@@ -13,9 +16,18 @@ export class AuthService {
 
 
 private  Header = new HttpHeaders({ 'content-Type' : 'application/json'});
+// Registering the User
+
+registeringUser(user: RegistrationData): Observable<RegistrationResponse> {
+
+  return this.http.post<RegistrationResponse>('http://localhost:5000/user/registration' , user , { headers : this.Header } );
+}
 
 
-authenticateAdmin(user) {
+
+
+// Authenticating User
+authenticateUser(user) {
 
   return this.http.post('http://localhost:5000/user/loginauthentication' , user , { headers : this.Header } );
 }
@@ -33,7 +45,7 @@ logOut() {
   localStorage.clear();
 }
 
-authenticateRoute(){
-  
+authenticateRoute() {
+
 }
 }

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup , FormControl , Validators } from '@angular/forms' ;
+import { AuthService } from '../../service/auth.service' ;
+import { NgFlashMessageService } from 'ng-flash-messages';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
@@ -7,9 +11,11 @@ import { FormGroup , FormControl , Validators } from '@angular/forms' ;
 })
 export class RegistrationComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AuthService ,
+              private FlashMessage: NgFlashMessageService ,
+              private router: Router ) { }
 
- user = new FormGroup({
+public user = new FormGroup({
       username :  new  FormControl('' , ),
       password :  new  FormControl(''),
       confirmPassword :  new  FormControl(''),
@@ -18,7 +24,22 @@ export class RegistrationComponent implements OnInit {
 });
 
 getUserData() {
-  console.log(this.user.value);
+  const userDetail = this.user.value;
+
+  this.auth.registeringUser(userDetail).subscribe((data) => {
+
+    this.FlashMessage.showFlashMessage({
+      messages: [data.mgs],
+      dismissible: true,
+      timeout: 2000,
+      type: 'danger'
+    });
+
+    if (data.success === true) {
+      this.router.navigate(['/dashboard']);
+    }
+
+  });
 }
   ngOnInit() {
   }
