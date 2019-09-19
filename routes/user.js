@@ -93,10 +93,13 @@ routers.post('/loginauthentication', (req, res ,next )=>{
           return res.json({
               mgs :"success",
               token : 'JWT ' + token,
-              username : data.username,
-              password : data.password,
-              phone    : data.phone,
-              email    : data.email
+              user : {
+                username : data.username,
+                password : data.password,
+                phone    : data.phone,
+                email    : data.email
+              }
+              
         });
 
            }else {
@@ -122,9 +125,9 @@ routers.post('/loginauthentication', (req, res ,next )=>{
 routers.get('/profile', Passport.authenticate('jwt' , {session:false}) , (req, res ,next )=>{ 
     
     
+    console.log('apidata' + req.user);
     
-    
-    res.json({user: req.user})
+    res.json(req.user);
     
 }); 
 

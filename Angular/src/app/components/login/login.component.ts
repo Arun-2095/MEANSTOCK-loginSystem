@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
     });
 
      if (data.mgs === 'success') {
-      this.auth.storeUserData(data.token , data.username);
+      this.auth.storeUserData(data.token , data.user);
       this.router.navigate(['/dashboard']);
     }
 

@@ -36,7 +36,7 @@ getUserData() {
     });
 
     if (data.success === true) {
-      this.router.navigate(['/dashboard']);
+      this.router.navigate(['/login']);
     }
 
   });
