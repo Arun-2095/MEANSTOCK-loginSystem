@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  constructor(private auth: AuthService,
+  constructor(public auth: AuthService,
               private flashMessage: NgFlashMessageService,
               private router: Router) {}
 

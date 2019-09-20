@@ -12,20 +12,20 @@
 <body>
   <div class="container-fluid m-0 p-0">
 <header>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark bg-dark text-white">
         <span class="navbar-brand mb-0 h1"> <a routerLink="/home" >MEAN</a></span>
       
   <div>
       <ul class="nav justify-content-end">
     
           <li class="nav-item">
-            <a class="nav-link" routerLink="/login"   routerLinkActive="active">Login</a>
+            <a class="nav-link" *ngIf="auth.loggedIn()" routerLink="/login"   routerLinkActive="active">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/registration"   routerLinkActive="active">Registration</a>
+            <a class="nav-link" *ngIf="auth.loggedIn()"  routerLink="/registration"   routerLinkActive="active">Registration</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  (click)="logoutClick()"> Logout</a>
+            <a class="nav-link" *ngIf="!auth.loggedIn()"    style="cursor: pointer; color:lightblue;" (click)="logoutClick()"> Logout </a>
           </li>
          
         </ul>
