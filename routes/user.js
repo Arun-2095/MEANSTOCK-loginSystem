@@ -125,7 +125,7 @@ routers.post('/loginauthentication', (req, res ,next )=>{
 routers.get('/profile', Passport.authenticate('jwt' , {session:false}) , (req, res ,next )=>{ 
     
     
-    console.log('apidata' + req.user);
+    
     
     res.json(req.user);
     

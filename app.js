@@ -15,9 +15,7 @@ const port = process.env.port || 5000;
 
 
 
-//load static files 
 
-app.use(express.static(path.join(__dirname,'public')));
 
 //  access the api from multi IPS
 
@@ -35,7 +33,7 @@ app.use(passport.session());
 authentication(passport);
 //setting routes
 
-app.get('/', (req,res)=>{ res.send("hello")});
+
 
 //user Api 
 app.use('/user' , userRoutes);
@@ -43,5 +41,12 @@ app.use('/user' , userRoutes);
 //admin Api 
 app.use('/admin' , adminRoutes);
 
+//load static files 
+
+app.use(express.static(path.join(__dirname,'public')));
+
+app.get('*', function(req, res) {
+  res.sendfile(path.join(__dirname,'public/index.html'));
+})
 
 app.listen(port,()=>{ console.log('server running on' + port ) });
