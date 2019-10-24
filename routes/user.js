@@ -5,7 +5,7 @@ const config     = require('../config/database');
 // Handling the mongodb data object
 const mongoose   = require('mongoose');
 //database model 
-const User = require('../models/user_model');
+const User = require('../models/user_models');
 //password generation and Verification
 const Password = require('../config/password');
 // token Generation
