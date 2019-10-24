@@ -33,13 +33,13 @@ loggedIn(): boolean {
 
 registeringUser(user: RegistrationData): Observable<RegistrationResponse> {
 
-  return this.http.post<RegistrationResponse>('http://localhost:5000/user/registration' , user , { headers : this.Header } );
+  return this.http.post<RegistrationResponse>('user/registration' , user , { headers : this.Header } );
 }
 
 // Authenticating User
 authenticateUser(user): Observable<Dataformat> {
 
-  return this.http.post<Dataformat>('http://localhost:5000/user/loginauthentication' , user , { headers : this.Header } );
+  return this.http.post<Dataformat>('user/loginauthentication' , user , { headers : this.Header } );
 }
 
 storeUserData(token, user) {
@@ -69,7 +69,7 @@ authenticateRoute(): Observable<User> {
   const  autherisedHeader = new HttpHeaders().set(
     'Authorization' , this.authToken
   ).set('content-Type' , 'application/json');
-  return this.http.get<User>('http://localhost:5000/user/profile' , { headers : autherisedHeader } );
+  return this.http.get<User>('user/profile' , { headers : autherisedHeader } );
 }
 
 }

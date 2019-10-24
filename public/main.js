@@ -118,7 +118,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n  <meta charset=\"UTF-8\">\n  <meta name=\"viewport\" content=\"width=, initial-scale=1.0\">\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\n  <title>Mean Stack Admin </title>\n  <base href=\"/\">\n</head>\n<body>\n  <div class=\"container-fluid m-0 p-0\">\n<header>\n    <nav class=\"navbar navbar-dark bg-dark text-white\">\n        <span class=\"navbar-brand mb-0 h1\"> <a routerLink=\"/home\" >MEAN</a></span>\n      \n  <div>\n      <ul class=\"nav justify-content-end\">\n    \n          <li class=\"nav-item\">\n            <a class=\"nav-link\" *ngIf=\"auth.loggedIn()\" routerLink=\"/login\"   routerLinkActive=\"active\">Login</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" *ngIf=\"auth.loggedIn()\"  routerLink=\"/registration\"   routerLinkActive=\"active\">Registration</a>\n          </li>\n          <li class=\"nav-item\">\n            <a class=\"nav-link\" *ngIf=\"!auth.loggedIn()\"    style=\"cursor: pointer; color:lightblue;\" (click)=\"logoutClick()\"> Logout </a>\n          </li>\n         \n        </ul>\n  </div>\n</nav>\n</header>\n  </div>\n  \n  <router-outlet></router-outlet>\n\n  \n</body>\n</html>\n\n\n\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <meta name=\"viewport\" content=\"width=, initial-scale=1.0\">\r\n  <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\r\n  <title>Mean Stack Admin </title>\r\n  <base href=\"/\">\r\n</head>\r\n<body>\r\n  <div class=\"container-fluid m-0 p-0\">\r\n<header>\r\n    <nav class=\"navbar navbar-dark bg-dark text-white\">\r\n        <span class=\"navbar-brand mb-0 h1\"> <a routerLink=\"/home\" >MEAN</a></span>\r\n      \r\n  <div>\r\n      <ul class=\"nav justify-content-end\">\r\n    \r\n          <li class=\"nav-item\">\r\n            <a class=\"nav-link\" *ngIf=\"auth.loggedIn()\" routerLink=\"/login\"   routerLinkActive=\"active\">Login</a>\r\n          </li>\r\n          <li class=\"nav-item\">\r\n            <a class=\"nav-link\" *ngIf=\"auth.loggedIn()\"  routerLink=\"/registration\"   routerLinkActive=\"active\">Registration</a>\r\n          </li>\r\n          <li class=\"nav-item\">\r\n            <a class=\"nav-link\" *ngIf=\"!auth.loggedIn()\"    style=\"cursor: pointer; color:lightblue;\" (click)=\"logoutClick()\"> Logout </a>\r\n          </li>\r\n         \r\n        </ul>\r\n  </div>\r\n</nav>\r\n</header>\r\n  </div>\r\n  \r\n  <router-outlet></router-outlet>\r\n\r\n  \r\n</body>\r\n</html>\r\n\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -272,7 +272,7 @@ module.exports = "@import \"https://use.fontawesome.com/releases/v5.5.0/css/all.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"body\"> \n    <form  class=\"login-box\" (submit)='getData()' >\n        <ng-flash-message></ng-flash-message>\n      <h1>Welcome Admin</h1>\n      <div class=\"textbox\">\n        <i class=\"fas fa-user\"></i>\n        <input type=\"text\" placeholder=\"Username\" [(ngModel)]=\"admin\"  name=\"admin\">\n      </div>\n    <div class=\"textbox\">\n        <i class=\"fas fa-lock\"></i>\n        <input type=\"password\" placeholder=\"Password\"   [(ngModel)]=\"password\"  name=\"password\" >\n      </div>\n    <input type=\"submit\" class=\"btn\" value=\"Sign in\">\n    </form>\n    </div>"
+module.exports = "<div class=\"body\"> \r\n    <form  class=\"login-box\" (submit)='getData()' >\r\n        <ng-flash-message></ng-flash-message>\r\n      <h1>Welcome Admin</h1>\r\n      <div class=\"textbox\">\r\n        <i class=\"fas fa-user\"></i>\r\n        <input type=\"text\" placeholder=\"Username\" [(ngModel)]=\"admin\"  name=\"admin\">\r\n      </div>\r\n    <div class=\"textbox\">\r\n        <i class=\"fas fa-lock\"></i>\r\n        <input type=\"password\" placeholder=\"Password\"   [(ngModel)]=\"password\"  name=\"password\" >\r\n      </div>\r\n    <input type=\"submit\" class=\"btn\" value=\"Sign in\">\r\n    </form>\r\n    </div>"
 
 /***/ }),
 
@@ -355,7 +355,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n<div class=\"container\">\n    <h1> dashboard works!</h1>\n\n    <table class=\"table table-dark\" *ngIf=\"showdata\">\n     \n      <thead>\n          <tr>\n            <th scope=\"col\">1</th>\n            <th scope=\"col\">Name</th>\n            <th scope=\"col\"> {{user.username}}</th>\n           \n          </tr>\n        </thead>\n        <tbody>\n          <tr>\n            <th scope=\"row\">2</th>\n            <td>Phone Number</td>\n            <td>{{user.phone}}</td>\n            \n          </tr>\n          <tr>\n              <th scope=\"row\">2</th>\n              <td>Email</td>\n              <td>{{user.email}}</td>\n              \n            </tr>\n          \n        </tbody>\n      </table>\n    \n    \n</div>\n"
+module.exports = "\r\n<div class=\"container\">\r\n    <h1> dashboard works!</h1>\r\n\r\n    <table class=\"table table-dark\" *ngIf=\"showdata\">\r\n     \r\n      <thead>\r\n          <tr>\r\n            <th scope=\"col\">1</th>\r\n            <th scope=\"col\">Name</th>\r\n            <th scope=\"col\"> {{user.username}}</th>\r\n           \r\n          </tr>\r\n        </thead>\r\n        <tbody>\r\n          <tr>\r\n            <th scope=\"row\">2</th>\r\n            <td>Phone Number</td>\r\n            <td>{{user.phone}}</td>\r\n            \r\n          </tr>\r\n          <tr>\r\n              <th scope=\"row\">2</th>\r\n              <td>Email</td>\r\n              <td>{{user.email}}</td>\r\n              \r\n            </tr>\r\n          \r\n        </tbody>\r\n      </table>\r\n    \r\n    \r\n</div>\r\n"
 
 /***/ }),
 
@@ -426,7 +426,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  home works!\n</p>\n"
+module.exports = "<h1>\r\n This app focused on performing login Authentication and Registration\r\n</h1>\r\n"
 
 /***/ }),
 
@@ -482,7 +482,7 @@ module.exports = "@import \"https://use.fontawesome.com/releases/v5.5.0/css/all.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"body\"> \n  <form [formGroup]='login' class=\"login-box\" (submit)='getUser()' >\n      <ng-flash-message></ng-flash-message>\n    <h1>Login  </h1>\n    <div class=\"textbox\">\n      <i class=\"fas fa-user\"></i>\n      <input type=\"email\" placeholder=\"Username\" formControlName=\"email\"  name=\"admin\" required>\n    </div>\n  <div class=\"textbox\">\n      <i class=\"fas fa-lock\"></i>\n      <input type=\"password\" placeholder=\"Password\"   formControlName=\"password\"  name=\"password\" required>\n    </div>\n  <input type=\"submit\" class=\"btn\"  [disabled]=\"!login.valid\" value=\"Sign in\">\n  </form>\n  </div>"
+module.exports = "<div class=\"body\"> \r\n  <form [formGroup]='login' class=\"login-box\" (submit)='getUser()' >\r\n      <ng-flash-message></ng-flash-message>\r\n    <h1>Login  </h1>\r\n    <div class=\"textbox\">\r\n      <i class=\"fas fa-user\"></i>\r\n      <input type=\"email\" placeholder=\"Email\" formControlName=\"email\"  name=\"admin\" required>\r\n    </div>\r\n  <div class=\"textbox\">\r\n      <i class=\"fas fa-lock\"></i>\r\n      <input type=\"password\" placeholder=\"Password\"   formControlName=\"password\"  name=\"password\" required>\r\n    </div>\r\n  <input type=\"submit\" class=\"btn\"  [disabled]=\"!login.valid\" value=\"Sign in\">\r\n  </form>\r\n  </div>"
 
 /***/ }),
 
@@ -575,7 +575,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  profile works!\n</p>\n"
+module.exports = "<p>\r\n  profile works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -631,7 +631,7 @@ module.exports = " \r\n@import url(https://fonts.googleapis.com/css?family=Noto+
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n  \n  <!-- formulário de contacto utilizando html e css -->  \n<div class=\"contain\"> \n\t<div class=\"contact_form\">\n\n\t\t<div class=\"form\">\t\n\t\t\t\n\t\t\t\t<ng-flash-message></ng-flash-message>\n      <h1>Registration</h1>\n\t\t\t\t\n\n\n\t\t\t\t\t<form [formGroup]='user' action=\"\" (submit)=\"getUserData()\">\t\t\t\t\n\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<label for=\"name\">Name\n\t\t\t\t\t\t\t\t\t\t<span >*</span>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" formControlName=\"username\" id=\"name\" required  placeholder=\"User Name\">\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<label for=\"email\">Email\n\t\t\t\t\t\t\t\t\t\t<span>*</span>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"email\" formControlName=\"email\" id=\"email\" required placeholder=\"Email\">\n\t\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<label for=\"phone\" >Phone\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"tel\" formControlName=\"phone\" id=\"telefone\" placeholder=\"Phone\">\n\t\t\t\t\t\t\t\t</p>\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<label for=\"password\" > Password\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"password\" formControlName=\"password\" id=\"website\" placeholder=\"Password\">\n\t\t\t\t\t\t\t\t</p>\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t\t<label for=\"confirm Password\" >Confirm Password\n\t\t\t\t\t\t\t\t\t\t<span>*</span>\n\t\t\t\t\t\t\t\t\t</label>\n\t\t\t\t\t\t\t\t\t\t<input type=\"password\" formControlName=\"confirmPassword\" id=\"Confirm Password\" required placeholder=\"Confirm Password\">\n\t\t\t\t\t\t\t\t</p>\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t<button type=\"submit\"  name=\"sumbit\" id=\"sumbit\" [disabled]=!user.valid><p>sumbit</p></button>\n\n\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t</form>\n\t\t</div>\t\n\t</div>\n\n</div>\n\n\n"
+module.exports = "\r\n  \r\n  <!-- formulário de contacto utilizando html e css -->  \r\n<div class=\"contain\"> \r\n\t<div class=\"contact_form\">\r\n\r\n\t\t<div class=\"form\">\t\r\n\t\t\t\r\n\t\t\t\t<ng-flash-message></ng-flash-message>\r\n      <h1>Registration</h1>\r\n\t\t\t\t\r\n\r\n\r\n\t\t\t\t\t<form [formGroup]='user' action=\"\" (submit)=\"getUserData()\">\t\t\t\t\r\n\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<p>\r\n\t\t\t\t\t\t\t\t\t<label for=\"name\">Name\r\n\t\t\t\t\t\t\t\t\t\t<span >*</span>\r\n\t\t\t\t\t\t\t\t\t</label>\r\n\t\t\t\t\t\t\t\t\t\t<input type=\"text\" formControlName=\"username\" id=\"name\" required  placeholder=\"User Name\">\r\n\t\t\t\t\t\t\t\t</p>\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<p>\r\n\t\t\t\t\t\t\t\t\t<label for=\"email\">Email\r\n\t\t\t\t\t\t\t\t\t\t<span>*</span>\r\n\t\t\t\t\t\t\t\t\t</label>\r\n\t\t\t\t\t\t\t\t\t\t<input type=\"email\" formControlName=\"email\" id=\"email\" required placeholder=\"Email\">\r\n\t\t\t\t\t\t\t\t</p>\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<p>\r\n\t\t\t\t\t\t\t\t\t<label for=\"phone\" >Phone\r\n\t\t\t\t\t\t\t\t\t</label>\r\n\t\t\t\t\t\t\t\t\t\t<input type=\"tel\" formControlName=\"phone\" id=\"telefone\" placeholder=\"Phone\">\r\n\t\t\t\t\t\t\t\t</p>\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<p>\r\n\t\t\t\t\t\t\t\t\t<label for=\"password\" > Password\r\n\t\t\t\t\t\t\t\t\t</label>\r\n\t\t\t\t\t\t\t\t\t\t<input type=\"password\" formControlName=\"password\" id=\"website\" placeholder=\"Password\">\r\n\t\t\t\t\t\t\t\t</p>\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<p>\r\n\t\t\t\t\t\t\t\t\t<label for=\"confirm Password\" >Confirm Password\r\n\t\t\t\t\t\t\t\t\t\t<span>*</span>\r\n\t\t\t\t\t\t\t\t\t</label>\r\n\t\t\t\t\t\t\t\t\t\t<input type=\"password\" formControlName=\"confirmPassword\" id=\"Confirm Password\" required placeholder=\"Confirm Password\">\r\n\t\t\t\t\t\t\t\t</p>\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\t\t<button type=\"submit\"  name=\"sumbit\" id=\"sumbit\" [disabled]=!user.valid><p>sumbit</p></button>\r\n\r\n\t\t\t\t\t\t\t\t\t\t\t\r\n\t\t\t\t\t\t\r\n\t\t\t\t\t</form>\r\n\t\t</div>\t\r\n\t</div>\r\n\r\n</div>\r\n\r\n\r\n"
 
 /***/ }),
 
@@ -736,11 +736,11 @@ var AuthService = /** @class */ (function () {
     };
     // Registering the User
     AuthService.prototype.registeringUser = function (user) {
-        return this.http.post('http://localhost:5000/user/registration', user, { headers: this.Header });
+        return this.http.post('user/registration', user, { headers: this.Header });
     };
     // Authenticating User
     AuthService.prototype.authenticateUser = function (user) {
-        return this.http.post('http://localhost:5000/user/loginauthentication', user, { headers: this.Header });
+        return this.http.post('user/loginauthentication', user, { headers: this.Header });
     };
     AuthService.prototype.storeUserData = function (token, user) {
         localStorage.setItem('id_token', token);
@@ -762,7 +762,7 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.authenticateRoute = function () {
         this.loadToken();
         var autherisedHeader = new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]().set('Authorization', this.authToken).set('content-Type', 'application/json');
-        return this.http.get('http://localhost:5000/user/profile', { headers: autherisedHeader });
+        return this.http.get('user/profile', { headers: autherisedHeader });
     };
     AuthService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
@@ -921,7 +921,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\project\MeanStack\Angular\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\project\login\MEANSTOCK-loginSystem\Angular\src\main.ts */"./src/main.ts");
 
 
 /***/ })
